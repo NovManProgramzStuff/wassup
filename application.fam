@@ -1,7 +1,12 @@
+#include <flipper.h>
 
-# Placeholder
-App(
-    appid="example_apps",
-    name="Example apps bundle",
-    apptype=FlipperAppType.METAPACKAGE,
-)
+int main(void) {
+    lf_device_open("flipper:///");
+
+    lf_display_draw_string("Hello", 0, 0);
+    lf_display_refresh();
+
+    lf_device_close();
+
+    return 0;
+}
